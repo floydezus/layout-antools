@@ -1,0 +1,30 @@
+{
+  "name": "layout-antools",
+  "version": "1.0.0",
+  "description": "awesome layout",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floydezus/layout-antools.git"
+  },
+  "keywords": [
+    "layout",
+    "sass",
+    "html"
+  ],
+  "author": "Alexander Tokarev",
+  "license": "ISC",
+  "homepage": "https://github.com/floydezus/layout-antools#readme",
+  "devDependencies": {
+    "htmlhint": "^1.1.0",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.56.2",
+    "stylelint": "^14.2.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.1.0",
+    "surge": "^0.23.1"
+  }
+}
