@@ -1,0 +1,25 @@
+.auth {
+  &__login {
+    margin-right: 12px;
+
+    color: $text-color-primary;
+
+    background-color: transparent;
+    opacity: 0.78;
+  }
+
+  &__signup {
+    border-radius: 8px;
+
+    color: #fdf5ff;
+
+    &:hover {
+      color: $text-color-primary;
+    }
+
+    &:active {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+  }
+}

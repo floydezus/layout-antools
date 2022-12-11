@@ -1,0 +1,14 @@
+.logo {
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+
+    opacity: 0.9;
+  }
+}

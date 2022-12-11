@@ -1,0 +1,180 @@
+.product-card {
+  width: 392px;
+  padding: 33px;
+  border-radius: 15px;
+
+  background-color: inherit;
+  opacity: 0.78;
+
+  &__head {
+    display: grid;
+    grid-auto-columns: max-content auto;
+    grid-gap: 3px 30px;
+    grid-template-areas:
+      "icon title"
+      "icon subtitle";
+  }
+
+  &__icon {
+    grid-area: icon;
+    width: max-content;
+  }
+
+  &__title {
+    grid-area: title;
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  &__subtitle {
+    grid-area: subtitle;
+    margin: 0;
+
+    color: $text-color-accent;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+    opacity: 0.55;
+  }
+
+  &__description {
+    width: 326px;
+    max-width: 100%;
+    margin-top: 30px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+
+    opacity: 0.55;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  &__favorites {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  &__likes,
+  &__save {
+    width: 42px;
+    height: 42px;
+    padding: 7px;
+    border-radius: 8px;
+
+    transition: all $transition-duration;
+  }
+
+  &__likes--is-active {
+    background: #283036;
+    box-shadow: 0 5px 10px -3px rgb(18 18 18 / 15%);
+
+    .product-card__likes-svg {
+      fill: #fd3b41;
+      fill-opacity: 10000%;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__likes:hover {
+    .product-card__likes-svg {
+      fill-opacity: 10000%;
+    }
+  }
+
+  &__save:hover {
+    .product-card__save-svg * {
+      fill-opacity: 10000%;
+    }
+  }
+
+  &__visit {
+    margin-left: auto;
+
+    color: rgb(255 255 255 / 55%);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    background-color: inherit;
+  }
+}
+
+.product-card--is-active {
+  position: relative;
+
+  border: solid 3px transparent;
+  overflow: hidden;
+
+  background:
+    linear-gradient(0deg, rgb(40 48 54 / 60%), rgb(40 48 54 / 60%)),
+    linear-gradient(
+      118.49deg,
+      rgb(255 255 255 / 8%) -2.11%,
+      rgb(255 255 255 / 0%) 28.55%,
+      rgb(255 255 255 / 5%) 44.69%,
+      rgb(255 255 255 / 0%) 96.78%
+    );
+  transform: translateY(-20px);
+  opacity: 1;
+  backdrop-filter: blur(25px);
+
+  $border: 3px;
+
+  &::after {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    z-index: -1;
+
+    width: 65px;
+    height: 65px;
+
+    background: rgb(255 110 48 / 60%);
+    filter: blur(50px);
+
+    content: "";
+  }
+
+  .product-card__subtitle {
+    opacity: 1;
+  }
+
+  .product-card__description {
+    opacity: 0.78;
+  }
+
+  .product-card__visit {
+    padding: 9px 35px;
+
+    color: $text-color-dark;
+
+    background-color: $brand-color;
+
+    &:hover {
+      color: $text-color-primary;
+    }
+  }
+}
+
+.product-card--small {
+  width: 288px;
+  padding: 22px 28px;
+
+  .product-card__description {
+    font-size: 14px;
+  }
+}

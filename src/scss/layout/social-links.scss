@@ -1,0 +1,23 @@
+.social-links {
+  display: flex;
+  gap: 8px;
+
+  padding: 0;
+
+  list-style: none;
+
+  &__item {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  &__link {
+    cursor: pointer;
+
+    &:hover {
+      * {
+        fill-opacity: 100%;
+      }
+    }
+  }
+}

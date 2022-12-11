@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$font-main: "Poppins", sans-serif !default;
+$font-side: "Roboto", sans-serif !default;
+
+/// Copy text color
+/// @type Color
+$text-color-primary: #fff !default;
+$text-color-accent: #ffa537 !default;
+$text-color-dark: #1e252b !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #ff6e30 !default;
+$bg-color: #1e252b !default;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1224px !default;
+
+/// Other
+$transition-duration: 0.2s;

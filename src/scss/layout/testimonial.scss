@@ -1,0 +1,151 @@
+.testimonial {
+  height: 600px;
+  margin-top: 200px;
+
+  &__container {
+    height: 100%;
+  }
+}
+
+.testimonial-content {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "illustrate text";
+  max-width: 100%;
+  max-height: 100%;
+
+  &__illustrate {
+    position: relative;
+
+    grid-area: illustrate;
+
+    &::before {
+      position: absolute;
+      top: 182px;
+      left: 42px;
+
+      width: 25px;
+      height: 25px;
+
+      background: #b345f1;
+      filter: blur(25px);
+
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: 350px;
+      bottom: 0;
+      left: 250px;
+      z-index: -1;
+
+      width: 100px;
+      height: 100px;
+
+      background: rgb(255 110 48 / 30%);
+      filter: blur(30px);
+
+      content: "";
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__person {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 1;
+  }
+
+  &__panel {
+    position: absolute;
+    top: 380px;
+    right: 20px;
+    bottom: 0;
+    z-index: 2;
+
+    width: 265px;
+    height: 91px;
+    padding: 10px 22px 16px;
+
+    border: 1px solid;
+    border-radius: 8px;
+
+    border-image-source: linear-gradient(96.67deg, rgb(255 255 255 / 10%) -5.21%, rgb(255 255 255 / 0%) 93.75%);
+    overflow: hidden;
+
+    background:
+      linear-gradient(0deg, rgb(40 48 54 / 20%), rgb(40 48 54 / 20%)),
+      linear-gradient(96.67deg, rgb(255 255 255 / 10%) -5.21%, rgb(255 255 255 / 0%) 93.75%);
+
+    backdrop-filter: blur(25px);
+
+    &::after {
+      position: absolute;
+      top: 50px;
+      right: -20px;
+
+      width: 50px;
+      height: 50px;
+
+      background: #086bad;
+      filter: blur(30px);
+
+      content: "";
+    }
+  }
+
+  &__name,
+  &__position {
+    margin: 0;
+  }
+
+  &__name {
+    margin-bottom: 2px;
+
+    color: rgb(255 253 253 / 78%);
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  &__position {
+    color: rgb(255 253 253 / 55%);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__text {
+    position: relative;
+
+    grid-area: text;
+    width: 393px;
+    height: 180px;
+    margin: 0;
+    padding-top: 100px;
+    padding-left: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    font-family: $font-side;
+    line-height: 30px;
+
+    opacity: 0.78;
+
+    &::before {
+      position: absolute;
+      top: 50px;
+      left: -55px;
+
+      content: url("../../images/testimonial/quotes.svg");
+    }
+  }
+}

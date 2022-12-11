@@ -1,0 +1,70 @@
+.input-std {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 11px;
+  border: solid 3px transparent;
+  border-radius: 15px;
+
+  background: #283036;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    margin: -4px;
+    border-radius: inherit;
+
+    background: linear-gradient(to right, rgb(255 255 255 / 10%), rgb(255 255 255 / 0%));
+
+    content: "";
+  }
+
+  &__input {
+    min-width: 250px;
+    padding: 13px 10px 14px 13px;
+    border: none;
+
+    color: $text-color-primary;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    background-color: transparent;
+    outline: none;
+    opacity: 0.38;
+  }
+
+  &__label--search-icon {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 6px;
+
+      transform: translateY(25%);
+
+      content: url("../../images/common/search.svg");
+    }
+
+    .input-std__input {
+      padding: 13px 10px 14px 43px;
+    }
+  }
+
+  &__button {
+    padding: 12px 36px;
+  }
+}
+
+.input-std--width-fix {
+  width: 500px;
+}

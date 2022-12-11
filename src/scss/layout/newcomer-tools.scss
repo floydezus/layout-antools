@@ -1,0 +1,37 @@
+.newcomer-tools {
+  margin-top: 200px;
+
+  &__container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "about catalog";
+  }
+
+  &__about {
+    grid-area: about;
+  }
+
+  &__title {
+    @extend %header-text;
+  }
+
+  &__subtitle {
+    @extend %subtitle-text;
+    width: 430px;
+    margin: 30px 0 0;
+
+    font-weight: 500;
+  }
+
+  &__btn-more {
+    margin-top: 60px;
+  }
+
+  &__catalog {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+
+    column-gap: 24px;
+  }
+}

@@ -1,0 +1,101 @@
+.carousel {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &__viewport {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    width: 850px;
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: scroll;
+
+    list-style: none;
+  }
+
+  &__slide {
+    position: relative;
+
+    flex: 0 0 100%;
+    height: 500px;
+    overflow: hidden;
+
+    background-color: transparent;
+  }
+
+  &__navigation {
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    text-align: center;
+  }
+
+  &__navigation-list,
+  &__navigation-item {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  &__navigation-item + &__navigation-item {
+    margin-left: 18px;
+  }
+
+  &__navigation-button {
+    display: inline-block;
+    width: 44px;
+    height: 6px;
+    border-radius: 4px;
+
+    font-size: 0;
+
+    background-color: #283036;
+    background-clip: content-box;
+
+    transition: transform 0.1s;
+  }
+
+  &__navigation-button--is-active {
+    height: 8px;
+
+    background-color: $brand-color;
+  }
+
+  &__navigation-directions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    transform: translateY(200px);
+  }
+
+  &__next,
+  &__prev {
+    transition: all $transition-duration;
+  }
+
+  &__next {
+    transform: scaleX(-1);
+  }
+
+  &__next:hover,
+  &__prev:hover {
+    * {
+      stroke: $brand-color;
+      stroke-opacity: 100%;
+    }
+  }
+}
