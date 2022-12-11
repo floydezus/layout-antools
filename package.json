@@ -1,7 +1,7 @@
 {
   "name": "layout-antools",
   "version": "1.0.0",
-  "description": "awesome layout",
+  "description": "Used html, SASS and gulp for translation to CSS. No scripts no adaptive",
   "main": "",
   "repository": {
     "type": "git",
